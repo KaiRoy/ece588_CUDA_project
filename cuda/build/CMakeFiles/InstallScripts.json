@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"H:/GitHub/ece588_CUDA_project/cuda/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

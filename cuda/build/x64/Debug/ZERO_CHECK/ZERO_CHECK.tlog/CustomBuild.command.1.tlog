@@ -1,0 +1,10 @@
+^H:\GITHUB\ECE588_CUDA_PROJECT\CUDA\BUILD\CMAKEFILES\8A36BCACFA20EA56B91D53CA8A4F3952\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SH:/GitHub/ece588_CUDA_project/cuda -BH:/GitHub/ece588_CUDA_project/cuda/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file H:/GitHub/ece588_CUDA_project/cuda/build/CUDAMatrixSolver.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

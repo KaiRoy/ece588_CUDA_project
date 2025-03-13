@@ -1,0 +1,10 @@
+^H:\GITHUB\ECE588_CUDA_PROJECT\CUDA\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SH:/GitHub/ece588_CUDA_project/cuda -BH:/GitHub/ece588_CUDA_project/cuda/build --check-stamp-file H:/GitHub/ece588_CUDA_project/cuda/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
