@@ -1,9 +1,15 @@
 ﻿  Building Custom Rule H:/GitHub/ece588_CUDA_project/cuda/CMakeLists.txt
   Compiling CUDA source file ..\CUDAMatrixSolver\main.cu...
   
-  H:\GitHub\ece588_CUDA_project\cuda\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin\nvcc.exe"  --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\HostX64\x64" -x cu -rdc=true   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\include"     --keep-dir x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -std=c++17 --generate-code=arch=compute_89,code=[compute_89,sm_89] -Xcudafe --diag_suppress=esa_on_defaulted_function_ignored --expt-relaxed-constexpr -Xcompiler="/EHsc -Zi -Ob0" -g  -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -D"CMAKE_INTDIR=\"Debug\"" -Xcompiler "/EHsc /W1 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -Xcompiler "/FdCUDAMatrixSolver.dir\Debug\vc142.pdb" -o CUDAMatrixSolver.dir\Debug\main.obj "H:\GitHub\ece588_CUDA_project\cuda\CUDAMatrixSolver\main.cu" 
+  H:\GitHub\ece588_CUDA_project\cuda\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin\nvcc.exe"  --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\bin\HostX64\x64" -x cu -rdc=true  -IH:\GitHub\ece588_CUDA_project\cuda -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\include"     --keep-dir x64\Debug  -maxrregcount=0    --machine 64 --compile -cudart static -std=c++17 --generate-code=arch=compute_89,code=[compute_89,sm_89] -Xcudafe --diag_suppress=esa_on_defaulted_function_ignored --expt-relaxed-constexpr -Xcompiler="/EHsc -Zi -Ob0" -g  -D_WINDOWS -D"CMAKE_INTDIR=\"Debug\"" -D_MBCS -D"CMAKE_INTDIR=\"Debug\"" -Xcompiler "/EHsc /W1 /nologo /Od /FS /Zi /RTC1 /MDd /GR" -Xcompiler "/FdCUDAMatrixSolver.dir\Debug\vc142.pdb" -o CUDAMatrixSolver.dir\Debug\main.obj "H:\GitHub\ece588_CUDA_project\cuda\CUDAMatrixSolver\main.cu" 
+H:\GitHub\ece588_CUDA_project\cuda\CUDAMatrixSolver\main.cu(48): warning #177-D: variable "line_count" was declared but never referenced
+        int line_count = 0;
+            ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
   main.cu
-  tmpxft_0000d04c_00000000-7_main.cudafe1.cpp
+  tmpxft_00011378_00000000-7_main.cudafe1.cpp
   
   H:\GitHub\ece588_CUDA_project\cuda\build>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin\nvcc.exe" -dlink  -o CUDAMatrixSolver.dir\Debug\CUDAMatrixSolver.device-link.obj -Xcompiler "/EHsc /W1 /nologo /Od /Zi /RTC1 /MDd /GR" -Xcompiler "/FdCUDAMatrixSolver.dir\Debug\vc142.pdb" -L"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin/crt" -L"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\lib\x64" cudadevrt.lib cudart_static.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib -forward-unknown-to-host-compiler -Wno-deprecated-gpu-targets -D_WINDOWS -Xcompiler=" /GR /EHsc" -Xcompiler=" -Zi -Ob0 -Od /RTC1" "--generate-code=arch=compute_89,code=[compute_89,sm_89]" -Xcompiler=-MDd    CUDAMatrixSolver.dir\Debug\main.obj 
   cudadevrt.lib

@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
     }
     myfile.close();
 
-    printSolution(solution, size);
+    // printSolution(solution, size);
     if (DEBUG) {
         printMatrix(matrix, size);
     }   

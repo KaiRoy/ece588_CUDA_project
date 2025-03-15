@@ -13,7 +13,7 @@
 #include <vector>
 #include <string>
 
-#define DEBUG false
+#define DEBUG true
 
 using namespace std;
 
@@ -230,18 +230,26 @@ void LUdecomp(float** A, float** L, float** U, int size) {
         }
     }
 
-    if (DEBUG) {
-        cout << "A22 Matrix:" << endl;
-        printMatrix(A22, rSize);
-        cout  << endl;
+    // if (DEBUG) {
+    //     cout << "A22 Matrix:" << endl;
+    //     printMatrix(A22, rSize);
+    //     cout  << endl;
 
-        cout << "S22 Matrix:" << endl;
-        printMatrix(L22, rSize);
-        cout  << endl;
+    //     cout << "S22 Matrix:" << endl;
+    //     printMatrix(L22, rSize);
+    //     cout  << endl;
+    // }
+
+    for (int i = 0; i < rSize; i++) {
+        delete [] A22[i];
     }
+    delete [] A22;
+    delete [] a12;
+    delete [] a21;
 
     // Recursively solve subproblem of small size
     LUdecomp(S22, L22, U22, rSize);
+
 
     // Put the L, U matrices together
     L[0][0] = l11;
@@ -258,21 +266,17 @@ void LUdecomp(float** A, float** L, float** U, int size) {
     }
 
 
-    delete [] a12;
     delete [] l12;
     delete [] u12;
 
-    delete [] a21;
     delete [] l21;
     delete [] u21;
 
     for (int i = 0; i < rSize; i++) {
-        delete [] A22[i];
         delete [] L22[i];
         delete [] U22[i];
         delete [] S22[i];
     }
-    delete [] A22;
     delete [] L22;
     delete [] U22;
     delete [] S22;
