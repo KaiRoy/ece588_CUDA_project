@@ -1,0 +1,11 @@
+The program/file names are as follows (sorry for the confusing names, didn't have time to change them)
+
+randMatrix.cpp (randMatrix.exe) is the program used to generate random augmented matrix of a linear system.
+
+serial is the implementation of the LU Factorization recursive algorithm (which was unused in the project report as I decided to focus on the different between a serial and parallel version of QR Factorization because processing time of the two serial algorithms was extremely long)
+
+parallel.cpp (parallel.exe) is the serial implementation of the QR Factorization algorithm
+
+main.cu (CUDAMatrixSolver.exe) is the CUDA accelerated version of the QR Factorization algorithm
+
+These programs where designed to be run on Windows with the .exe. I do not think these will be able to be compiled or run on the Linux servers
