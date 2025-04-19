@@ -12,8 +12,9 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <chrono>
 
-#define DEBUG true
+#define DEBUG false
 
 using namespace std;
 
@@ -26,13 +27,8 @@ void backSub(float** U, float* c, float* x, int size);
 
 int main(int argc, char *argv[])
 {
-    // vector<string> msg {"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
-
-    // for (const string& word : msg)
-    // {
-    //     cout << word << " ";
-    // }
-    // cout << endl;
+    auto start_time = std::chrono::high_resolution_clock::now();
+    
     string delimiter = " ";
     string s;
     int line_count = 0;
@@ -124,9 +120,16 @@ int main(int argc, char *argv[])
         cout  << endl;
     }
 
-    cout << "Solution Vector:" << endl;
-    printVector(vectorS, size);
-    cout  << endl;
+    // cout << "Solution Vector:" << endl;
+    // printVector(vectorS, size);
+    // cout  << endl;
+
+    auto end_time = std::chrono::high_resolution_clock::now();
+    auto time = end_time - start_time;
+    std::cout << "Time = " 
+    << time/std::chrono::nanoseconds(1) << " nanoseconds\t(" 
+    << time/std::chrono::nanoseconds(1)/1000000000 << "." 
+    << time/std::chrono::nanoseconds(1)%1000000000 << " sec)\n)";
 
     // delete matrix
     for (int i = 0; i < size; i++) {

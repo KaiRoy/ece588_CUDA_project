@@ -179,8 +179,6 @@ int main(int argc, char *argv[])
 
     backSub(R, h_vectorB, h_vectorS, size);
 
-    clock_t tEnd = clock();
-
     if (DEBUG) {
         // cout << "Resultant Vector:" << endl;
         // printVector(h_vectorB, size);

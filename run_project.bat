@@ -12,7 +12,7 @@ SET /A x = 10
 @echo ------------------ %x% ------------------
 @echo ""
 
-for /l %%y in (100, 100, 2000) do (
+for /l %%y in (100, 100, 500) do (
     .\randMatrix.exe %%y test.txt
     .\parallel.exe test.txt
     @echo ------------------ %%y ------------------
